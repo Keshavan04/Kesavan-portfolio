@@ -1,0 +1,39 @@
+[
+  {
+    "title": "AI Histopathology Diagnosis System",
+    "description": "FastAPI REST API with async handling and Celery + Redis task queuing for concurrent diagnostic inference. Multi-model deep-learning pipeline (ResNet18, MobileNetV2) with Grad-CAM explainability, Gemini AI generating structured clinical reports, and a React + Tailwind dashboard for real-time case tracking. Final-year project, 2025�2026.",
+    "tech": [
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "React",
+      "Tailwind",
+      "Celery",
+      "Redis",
+      "Gemini AI",
+      "OpenCV"
+    ],
+    "live": "#",
+    "code": "https://github.com/Kesavanharidoss",
+    "src": "/projects/01.svg",
+    "alt": "AI-powered histopathology diagnosis system with real-time clinical decision support"
+  },
+  {
+    "title": "Cybercrime Management Portal",
+    "description": "Role-based Django portal (Citizen / Officer / Admin) with a custom user model, MySQL, and DRF REST APIs for complaint submission and case management. TF-IDF + Naive Bayes auto-classifies complaints to speed up triage; SHA-256 evidence integrity checks, ReportLab PDF case summaries, a rule-based FAQ chatbot and Chart.js analytics dashboards. May 2026.",
+    "tech": [
+      "Python",
+      "Django",
+      "MySQL",
+      "DRF",
+      "scikit-learn",
+      "ReportLab",
+      "Bootstrap 5",
+      "Chart.js"
+    ],
+    "live": "#",
+    "code": "https://github.com/Kesavanharidoss",
+    "src": "/projects/02.svg",
+    "alt": "Integrated cybercrime management portal with role-based access"
+  }
+]
