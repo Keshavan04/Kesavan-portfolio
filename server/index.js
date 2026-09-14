@@ -192,7 +192,8 @@ if (SERVE_SITE) {
   }
   app.use(express.static(DIST_DIR, { maxAge: '1h' }))
   // SPA fallback so /admin deep-links work
-  app.get('*', (_req, res) => res.sendFile(path.join(DIST_DIR, 'index.html')))
+  // Express 5 (path-to-regexp v6+) requires named wildcards instead of a bare '*'.
+  app.get('/*splat', (_req, res) => res.sendFile(path.join(DIST_DIR, 'index.html')))
 }
 
 app.listen(PORT, () => {
