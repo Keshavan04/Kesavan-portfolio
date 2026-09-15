@@ -114,7 +114,7 @@ export const contact = {
   submitLabel: 'Send message',
   // Optional: paste a Formspree / Getform endpoint to receive real submissions.
   // Leave empty to run in demo mode (shows the success state without sending).
-  endpoint: '',
+  endpoint: 'https://formspree.io/f/myezgela',
 }
 
 export const footer = {
