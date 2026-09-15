@@ -32,7 +32,7 @@ const VISIBLE_FROM = 120 // degrees of angular distance where a card fades in
 const VISIBLE_RAMP = 60 // ...reaching full opacity at 180
 const CARD_TOP_OFFSET = -85 // px, keeps the ring optically centred
 
-const INFO_BLOCK_H = 250 // reserved height for the expanded card's text
+const INFO_BLOCK_H = 300 // reserved height for the expanded card's text
 const INFO_GAP = 24
 
 const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3)
@@ -119,7 +119,10 @@ export default function Projects() {
   const stageZ = isMobile ? 350 : 500
   const radius = isMobile ? 400 : 700
   const yScatter = isMobile ? 140 : 240
-  const detailW = Math.min(isMobile ? vw - 32 : 640, vw - 48)
+  const detailW = Math.max(
+    280,
+    Math.min(isMobile ? vw - 32 : 640, vw - 48, Math.floor((vh - 340) * (16 / 9)))
+  )
 
   /* ---------------- scroll -> rotation ---------------- */
   useEffect(() => {
@@ -313,7 +316,7 @@ export default function Projects() {
           <div className="grid grid-cols-12 gap-8 items-end border-b border-accent/10 pb-10">
             <div className="col-span-12 md:col-span-3">
               <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-accent/70">
-                [03] — Selected Work
+                [04] — Projects
               </p>
             </div>
             <div className="col-span-12 md:col-span-9">
@@ -529,30 +532,30 @@ export default function Projects() {
               {/* ---------------- detail text ---------------- */}
               {selected && infoBox && (
                 <div
-                  className="absolute text-center pointer-events-auto"
+                  className="absolute text-center pointer-events-auto max-h-[calc(100vh-top-12px)] overflow-y-auto px-2 pb-4 scrollbar-none"
                   style={{ ...infoBox, zIndex: 160 }}
                 >
                   <SlideUp visible={infoVisible} delay={0.15}>
                     <h3
                       className="font-black tracking-tight text-txt"
-                      style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}
+                      style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)' }}
                     >
                       {selected.title}
                     </h3>
                   </SlideUp>
 
                   <SlideUp visible={infoVisible} delay={0.25}>
-                    <p className="text-txt/55 text-sm md:text-base leading-relaxed mt-4 max-w-xl mx-auto">
+                    <p className="text-txt/65 text-xs sm:text-sm md:text-base leading-relaxed mt-2 sm:mt-3 max-w-xl mx-auto">
                       {selected.description}
                     </p>
                   </SlideUp>
 
                   <SlideUp visible={infoVisible} delay={0.32}>
-                    <div className="flex flex-wrap justify-center gap-2 mt-5">
+                    <div className="flex flex-wrap justify-center gap-2 mt-3 sm:mt-4">
                       {selected.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-3 py-1 text-[11px] font-mono tracking-wide rounded-full border border-accent/25 text-accent/80 bg-accent/5"
+                          className="px-3 py-1 text-[10px] sm:text-[11px] font-mono font-medium tracking-wide rounded-full border border-accent/40 text-accent bg-accent/10 shadow-[0_0_12px_rgba(108,186,250,0.15)] hover:border-accent hover:bg-accent/20 transition-all duration-300"
                         >
                           {t}
                         </span>
@@ -561,13 +564,13 @@ export default function Projects() {
                   </SlideUp>
 
                   <SlideUp visible={infoVisible} delay={0.45}>
-                    <div className="flex justify-center gap-4 mt-6">
+                    <div className="flex justify-center gap-3 sm:gap-4 mt-4 sm:mt-5">
                       <a
                         href={selected.live}
                         target="_blank"
                         rel="noreferrer"
                         data-dark-cursor
-                        className="group flex items-center gap-3 px-7 py-3.5 bg-accent text-dark font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-accent/30 cursor-pointer text-sm"
+                        className="group flex items-center gap-2.5 px-6 py-3 bg-accent text-dark font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-accent/30 cursor-pointer text-xs sm:text-sm"
                       >
                         <ActionIcon kind="live" />
                         Live Demo
@@ -576,7 +579,7 @@ export default function Projects() {
                         href={selected.code}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex items-center gap-3 px-7 py-3.5 bg-white/5 border border-white/10 text-txt font-bold rounded-xl hover:border-accent/50 hover:bg-accent/10 hover:scale-105 transition-all duration-300 cursor-pointer text-sm"
+                        className="group flex items-center gap-2.5 px-6 py-3 bg-white/5 border border-white/10 text-txt font-bold rounded-xl hover:border-accent/50 hover:bg-accent/10 hover:scale-105 transition-all duration-300 cursor-pointer text-xs sm:text-sm"
                       >
                         <ActionIcon kind="github" />
                         View Code

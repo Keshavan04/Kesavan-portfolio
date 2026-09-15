@@ -60,7 +60,7 @@ export default function About() {
             id="Aboutme"
             className="text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.35em] sm:tracking-[0.45em] text-accent/60 mb-8 sm:mb-12 md:mb-16"
           >
-            [02] — About
+            [01] — About
           </h2>
         </Reveal>
 
@@ -144,12 +144,12 @@ export default function About() {
               <div className="pt-6">
                 <button
                   onClick={() =>
-                    scroller.scrollTo('Projects', { smooth: true, duration: 700, offset: -80 })
+                    scroller.scrollTo('Skills', { smooth: true, duration: 700, offset: -80 })
                   }
                   className="group inline-flex items-center gap-3 text-sm font-mono text-accent/60 hover:text-accent transition-colors duration-300 cursor-pointer"
                 >
                   <span className="w-8 h-px bg-accent/40 group-hover:w-12 transition-all duration-300" />
-                  View my work
+                  View technical skills
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

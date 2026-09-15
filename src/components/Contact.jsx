@@ -187,7 +187,7 @@ export default function Contact() {
               </span>
               <span className="sr-only">
                 {' '}
-                — Contact {person.firstName} {person.lastName} for freelance web development
+                — Contact {person.firstName} {person.lastName} for backend and full-stack developer roles
               </span>
             </h2>
           </header>
@@ -224,7 +224,7 @@ export default function Contact() {
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-[0_0_8px_#4ade80]" />
                     <span className="text-txt text-sm font-medium">
-                      {person.available ? 'Open for new projects' : 'Currently booked'}
+                      {person.available ? 'Open for full-time roles' : 'Currently unavailable'}
                     </span>
                   </div>
                   <div className="flex items-center justify-between text-xs text-txt/45 font-mono pt-2 border-t border-txt/5">
@@ -276,9 +276,9 @@ export default function Contact() {
                     ◆ Send a message
                   </p>
                   <h3 className="text-2xl md:text-3xl font-bold text-txt">
-                    Tell me about your{' '}
+                    Tell me about the{' '}
                     <span className="italic font-light text-accent/80" style={{ fontFamily: "'Times New Roman', serif" }}>
-                      project
+                      opportunity
                     </span>
                   </h3>
                 </div>
@@ -310,7 +310,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={set('message')}
                   error={errors.message}
-                  placeholder="What are you building?"
+                  placeholder="Tell me about the role, team, or opportunity..."
                 />
 
                 <div className="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-txt/5">

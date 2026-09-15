@@ -317,7 +317,7 @@ export default function Header() {
             <div className="flex items-center gap-2.5 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_6px_#4ade80]" />
               <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-txt/50">
-                Available for work
+                Open for full-time roles
               </span>
             </div>
             <div className="flex items-center gap-5">

@@ -115,7 +115,7 @@ export default function Footer() {
             <div className="space-y-2 sm:space-y-2.5 text-sm max-w-full min-[770px]:max-w-[280px]">
               <div className="flex items-center gap-2 text-txt/70">
                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse shadow-[0_0_8px_#4ade80]" />
-                <span>{person.available ? 'Open for work' : 'Currently booked'}</span>
+                <span>{person.available ? 'Open for full-time roles' : 'Currently unavailable'}</span>
               </div>
               <div className="flex items-center justify-between gap-2 text-txt/50 font-mono text-xs pt-1">
                 <span>Reply within</span>

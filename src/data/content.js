@@ -30,7 +30,7 @@ export const person = {
 
 export const socials = [
   { label: 'GitHub', href: 'https://github.com/Keshavan04', icon: 'github' },
-  { label: 'LinkedIn', href: 'www.linkedin.com/in/kesavan-haridoss-9b6067255', icon: 'linkedin' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/kesavan-haridoss-9b6067255', icon: 'linkedin' },
 ]
 
 /** Scrolling tech strip under the hero. */
@@ -105,35 +105,80 @@ export const projects = [
 
 export const contact = {
   eyebrow: '[04] — Contact',
-  headlineTop: 'Got a project?',
-  headlineBottom: "Let's make it",
-  headlineAccent: 'real',
+  headlineTop: 'Looking to hire?',
+  headlineBottom: "Let's work",
+  headlineAccent: 'together',
   seoSummary:
-    'Contact Kesavan Haridoss for backend and full-stack development — Django, FastAPI, REST APIs, MySQL/PostgreSQL and React. Based in Chennai, open to roles and remote work.',
+    'Contact Kesavan Haridoss for backend and full-stack development roles — Django, FastAPI, REST APIs, MySQL/PostgreSQL and React. Based in Chennai, open to full-time roles and remote work.',
   formNote: 'Your info is only used to reply. No spam, ever.',
-  submitLabel: 'Start your project',
+  submitLabel: 'Send message',
   // Optional: paste a Formspree / Getform endpoint to receive real submissions.
   // Leave empty to run in demo mode (shows the success state without sending).
   endpoint: '',
 }
 
 export const footer = {
-  headline: 'Have a project?',
+  headline: 'Have an opportunity?',
   headlineItalic: "Let's talk",
   blurb:
     'Building scalable backend systems and REST APIs with Django and FastAPI, plus the React front-ends that use them. Based in Chennai, open to backend and full-stack roles.',
   builtWith: 'Built with React · Tailwind',
 }
+export const experiences = [
+  {
+    role: 'Development Intern',
+    company: 'Unlimited Innovations India Pvt. Ltd.',
+    period: 'Aug 2025 – Nov 2025',
+    location: 'Chennai, TN',
+    type: 'Internship',
+    bullets: [
+      'Translated product and engineering requirements into clear technical specifications, working directly with cross-functional teams to close ambiguity before development began.',
+      'Built pivot-table-driven reports and dashboards in Excel/Google Sheets to surface trends in business data, directly informing team decision-making.',
+    ],
+    tech: ['Technical Specifications', 'Requirements Analysis', 'Business Data Analytics', 'Dashboards & Reporting'],
+  },
+]
+
+export const skillCategories = [
+  {
+    category: 'Backend Frameworks',
+    skills: ['FastAPI', 'Django', 'REST API', 'API Integration'],
+  },
+  {
+    category: 'Languages',
+    skills: ['Python', 'HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    category: 'AI / ML',
+    skills: ['PyTorch', 'ResNet18', 'MobileNetV2', 'Grad-CAM', 'LLM API (Gemini)'],
+  },
+  {
+    category: 'Databases',
+    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'],
+  },
+  {
+    category: 'Web & Front-end',
+    skills: ['React.js', 'Bootstrap 5', 'Tailwind CSS', 'Chart.js'],
+  },
+  {
+    category: 'Core Concepts & Tools',
+    skills: ['OOP', 'JSON', 'Debugging', 'Testing', 'Git', 'GitHub'],
+  },
+]
 
 export const navLinks = [
   { label: 'About', to: 'Aboutme' },
-  { label: 'Work', to: 'Projects' },
+  { label: 'Skills', to: 'Skills' },
+  { label: 'Experience', to: 'Experience' },
+  { label: 'Projects', to: 'Projects' },
   { label: 'Contact', to: 'Contact' },
 ]
 
 export const footerNavLinks = [
   { label: 'Home', to: 'Home' },
   { label: 'About Me', to: 'Aboutme' },
+  { label: 'Skills', to: 'Skills' },
+  { label: 'Experience', to: 'Experience' },
   { label: 'Projects', to: 'Projects' },
   { label: 'Contact', to: 'Contact' },
 ]
